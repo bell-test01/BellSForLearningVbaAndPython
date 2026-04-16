@@ -1,0 +1,2 @@
+# BellSForLearningVbaAndPython
+学習用のリポジトリ
