@@ -1,8 +1,8 @@
-Attribute VB_Name = "Module1"
+ï»¿Attribute VB_Name = "Module1"
 Option Explicit
 
 '==============================
-' API’è‹`
+' APIå®šç¾©
 '==============================
 #If VBA7 Then
     Private Declare PtrSafe Function EnumWindows Lib "user32" (ByVal lpEnumFunc As LongPtr, ByVal lParam As LongPtr) As Long
@@ -45,13 +45,13 @@ Private Const SWP_NOSIZE As Long = &H1
 Private Const SWP_SHOWWINDOW As Long = &H40
 
 '==============================
-' •Ï”
+' å¤‰æ•°
 '==============================
 Public WindowList As Collection
 Private ProcCache As Object
 
 '==============================
-' ƒEƒBƒ“ƒhƒE—ñ‹“
+' ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦åˆ—æŒ™
 '==============================
 Sub GetWindowList()
     Set WindowList = New Collection
@@ -77,7 +77,7 @@ Function EnumWindowsProc(ByVal hwnd As LongPtr, ByVal lParam As LongPtr) As Long
 End Function
 
 '==============================
-' ƒvƒƒZƒXî•ñ
+' ãƒ—ãƒ­ã‚»ã‚¹æƒ…å ±
 '==============================
 Function GetProcessId(hwnd As LongPtr) As Long
     Dim pid As Long
@@ -106,7 +106,7 @@ Function GetProcessName(hwnd As LongPtr) As String
 
 End Function
 
-' ‚‘¬‰»ƒLƒƒƒbƒVƒ…
+' é«˜é€ŸåŒ–ã‚­ãƒ£ãƒƒã‚·ãƒ¥
 Function GetProcessNameCached(hwnd As LongPtr) As String
 
     If ProcCache Is Nothing Then
@@ -128,9 +128,9 @@ Function GetProcessNameCached(hwnd As LongPtr) As String
 End Function
 
 '==============================
-' ˆê——o—Í
+' ä¸€è¦§å‡ºåŠ›
 '==============================
-Sub ƒEƒBƒ“ƒhƒEˆê——æ“¾_Š®‘S”Å()
+Sub ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ä¸€è¦§å–å¾—_å®Œå…¨ç‰ˆ()
 
     Dim i As Long
     
@@ -154,13 +154,13 @@ Sub ƒEƒBƒ“ƒhƒEˆê——æ“¾_Š®‘S”Å()
             
         Next i
         
-        .Range("A1:E1").Value = Array("hwnd", "ƒ^ƒCƒgƒ‹", "PID", "ƒvƒƒZƒX–¼", "“§‰ß“x")
+        .Range("A1:E1").Value = Array("hwnd", "ã‚¿ã‚¤ãƒˆãƒ«", "PID", "ãƒ—ãƒ­ã‚»ã‚¹å", "é€éåº¦")
     End With
 
 End Sub
 
 '==============================
-' “§‰ßˆ—
+' é€éå‡¦ç†
 '==============================
 Sub SetTransparency(ByVal hwnd As LongPtr, ByVal alpha As Byte)
 

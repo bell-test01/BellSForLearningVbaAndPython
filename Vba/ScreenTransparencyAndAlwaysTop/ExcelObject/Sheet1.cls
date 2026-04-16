@@ -1,4 +1,4 @@
-VERSION 1.0 CLASS
+﻿VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
 END
@@ -12,7 +12,7 @@ Option Explicit
 Public Sub BtnGetWindowInfo()
     Application.EnableEvents = False
     Me.Range("A2:E" & Me.Rows.Count).ClearContents
-    �E�B���h�E�ꗗ�擾_���S��
+    ウィンドウ一覧取得_完全版
     Application.EnableEvents = True
 End Sub
 
@@ -24,7 +24,7 @@ Private Sub Worksheet_Change(ByVal Target As Range)
     
     Application.EnableEvents = False
     
-    ' --- ���ߏ����i�����j ---
+    ' --- 透過処理（既存） ---
     If Not Intersect(Target, Me.Columns("E")) Is Nothing Then
         
         For Each cell In Target
@@ -39,9 +39,7 @@ Private Sub Worksheet_Change(ByVal Target As Range)
         
     End If
     
-    
-    `'コミットテスト
-    ' --- �őO�ʏ����i�ǉ��j ---
+    ' --- 最前面処理（追加） ---
     If Not Intersect(Target, Me.Columns("F")) Is Nothing Then
         
         For Each cell In Target
