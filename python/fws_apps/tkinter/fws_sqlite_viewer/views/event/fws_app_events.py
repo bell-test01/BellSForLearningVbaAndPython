@@ -16,16 +16,10 @@ class FwsAppEvents:
     """
 
     def __init__(self, test_view=None, test_logic=None):
-        self.view = (
-            test_view if test_view is not None else fws_app_view.FwsAppView()
-        )
+        self.view = test_view if test_view is not None else fws_app_view.FwsAppView()
         """FwsAppView - 表示制御用ビューインスタンス。"""
 
-        self.logic = (
-            test_logic
-            if test_logic is not None
-            else fws_app_logic.FwsAppLogic()
-        )
+        self.logic = test_logic if test_logic is not None else fws_app_logic.FwsAppLogic()
         """FwsAppLogic - ビジネスロジックインスタンス。"""
 
         self._setup_event_bindings()
