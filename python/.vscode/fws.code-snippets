@@ -1,0 +1,61 @@
+{
+    "FWS Module Docstring": {
+        "scope": "python",
+        "prefix": "fwsdoc",
+        "body": [
+            "\"\"\"",
+            "Summary:",
+            "    ${1:モジュールの概要を記述する。}",
+            "Description:",
+            "    ${2:詳細な動作仕様や説明を記述する。}",
+            "ScreenName:",
+            "    ${3:画面の日本語物理名}",
+            "Attachment:",
+            "    ${4:添付設計書のパス}",
+            "\"\"\""
+        ],
+        "description": "FWS規約に準拠したモジュール用docstring"
+    },
+    "FWS Class Docstring": {
+        "scope": "python",
+        "prefix": "fwsdoc",
+        "body": [
+            "\"\"\"",
+            "Summary:",
+            "    ${1:クラスの概要を記述する。}",
+            "Description:",
+            "    ${2:詳細な動作仕様や説明を記述する。}",
+            "\"\"\""
+        ],
+        "description": "FWS規約に準拠したクラス用docstring"
+    },
+    "FWS Method/Function Docstring": {
+        "scope": "python",
+        "prefix": "fwsdoc",
+        "body": [
+            "\"\"\"",
+            "Summary:",
+            "    ${1:メソッドの概要を記述する。}",
+            "Description:",
+            "    ${2:詳細な動作仕様や説明を記述する。}",
+            "Args:",
+            "    ${3:引数名}: ${4:データ型} - ${5:説明}",
+            "Returns:",
+            "    ${6:データ型} - ${7:説明}",
+            "Raises:",
+            "    ${8:例外クラス名} - ${9:発生条件}",
+            "UserAction:",
+            "    ${10:操作トリガー} - ${11:期待される動作}",
+            "\"\"\""
+        ],
+        "description": "FWS規約に準拠したメソッド/関数用docstring"
+    },
+    "FWS Variable Docstring": {
+        "scope": "python",
+        "prefix": "fwsdoc",
+        "body": [
+            "\"\"\"${1:データ型} - ${2:変数の説明}\"\"\""
+        ],
+        "description": "FWS規約に準拠したメンバ変数用docstring"
+    }
+}
