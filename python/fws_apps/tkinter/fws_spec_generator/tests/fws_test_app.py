@@ -1,3 +1,4 @@
+"""不要想定"""
 import unittest
 from unittest.mock import MagicMock
 

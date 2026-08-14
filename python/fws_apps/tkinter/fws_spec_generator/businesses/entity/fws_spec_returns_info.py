@@ -1,3 +1,4 @@
+"""解析済"""
 import dataclasses
 
 @dataclasses.dataclass(frozen=True)
